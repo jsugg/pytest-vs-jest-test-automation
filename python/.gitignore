@@ -11,7 +11,8 @@ __pycache__/
 
 # PyTest cache
 .pytest_cache/
-
+assets/
+report.html
 # C extensions
 *.so
 

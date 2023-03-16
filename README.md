@@ -30,6 +30,8 @@ In the `python` folder, you'll find the implementation of the test scenarios usi
 ### Dependencies
 
 - Python 3.x
+- PyTest Framework
+- PyTest Xdist Plugin
 - Selenium WebDriver
 - Requests HTTP Library
 - Webdriver Manager
@@ -39,7 +41,7 @@ In the `python` folder, you'll find the implementation of the test scenarios usi
 1. Install Python3 and necessary dependencies.
 2. Navigate to the `python` folder.
 3. Install the project-specific necessary dependencies by running `pip install -r requirements.txt`.
-4. Execute the test script by running `python test_cases.py --html=report.html`.
+4. Execute the test script by running `pytest -n 2 --html=report.html`.
 
 ## Javascript Implementation [TBD]
 
@@ -51,6 +53,7 @@ In the `nodejs` folder, you'll find the implementation of the test cases using N
 - ChromeDriver
 - Playwright API
 - Jest Testing Framework
+- Allure Reports JS
 
 ### Setup and Execution [TBD]
 
