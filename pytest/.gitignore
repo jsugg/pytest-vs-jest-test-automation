@@ -138,6 +138,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# Reports
+report.html
+/assets/
+
 # Spyder project settings
 .spyderproject
 .spyproject
