@@ -1,4 +1,4 @@
-# Comparing PyTest + Selenium with NodeJS + Playwright + Jest for Automating Simple Test Scenarios
+# Comparing PyTest-Selenium vs Jest-NodeJS-Playwright for Automating Simple Test Scenarios
 
 This repository contains a comparison of using Python and Javascript to automate simple test cases. The purpose is to evaluate the ease of use, performance, and flexibility of both languages and their respective frameworks for test automation.
 
