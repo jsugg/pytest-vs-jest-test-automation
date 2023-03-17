@@ -63,11 +63,51 @@ In the `nodejs` folder, you'll find the implementation of the test cases using N
 
 ## Results and Analysis [TBD]
 
-This section will provide a detailed comparison of the results, including execution time, ease of use, and flexibility. The findings will help us determine the better choice between Python and Javascript for test automation.
+### Execution Time
+Pytest + Selenium: Pytest, when combined with Selenium, can sometimes exhibit slower test execution times. This is mainly due to the overhead associated with running and managing multiple browser instances, especially when testing heavy web applications.
+
+Jest + Playwright: Jest and Playwright usually deliver faster test execution times compared to the Pytest-Selenium combination. Playwright is designed to run tests concurrently in different browser contexts, allowing it to perform faster overall.
+
+### Ease of Use
+Pytest + Selenium: Pytest is a popular testing framework in the Python ecosystem, known for its simplicity and ease of use. However, using Selenium can sometimes be more complex due to its extensive API and the need to manage browser drivers.
+
+Jest + Playwright: Jest is also an easy-to-use testing framework in the JavaScript world, and Playwright simplifies browser automation. The API is more user-friendly and less verbose than Selenium's, making it easier to write and maintain tests.
+
+### Flexibility
+Pytest + Selenium: Pytest is highly flexible, with a vast number of plugins available for customization. Selenium supports multiple browsers and platforms, but it can be more challenging to set up and maintain a stable environment.
+
+Jest + Playwright: Jest is a flexible testing framework, and Playwright also supports multiple browsers. Although the number of plugins may be fewer than with Pytest, the combination of Jest and Playwright offers a more modern and streamlined approach to testing web applications.
+
+### Pros and Cons:
+
+#### Pytest + Selenium:
+Pros:
+
+Well-established, mature, and widely-used Python testing framework
+Extensive community support and available plugins
+Selenium supports a wide range of browsers and platforms
+Cons:
+
+Slower test execution time compared to Jest + Playwright
+More complex and verbose API, making it harder to write and maintain tests
+Can be challenging to set up and maintain a stable environment
+
+#### Jest + Playwright:
+Pros:
+
+Fast test execution time
+Modern and streamlined API, making it easier to write and maintain tests
+Playwright simplifies browser automation and supports multiple browsers
+Cons:
+
+Fewer available plugins compared to Pytest
+Requires proficiency in JavaScript (NodeJS) instead of Python
+The ecosystem is relatively newer compared to Pytest + Selenium
+
 
 ## Conclusion [TBD]
 
-A summary of the comparison and recommendations based on the analysis of the results will be provided in this section.
+The choice between these two test automation setups largely depends on the specific requirements, existing skillsets, and priorities of the development team. Pytest + Selenium might be better suited for teams with Python expertise and a need for extensive customization, while Jest + Playwright could be a better choice for teams focused on fast test execution times and a more modern, user-friendly API.
 
 ## License [TBD]
 
