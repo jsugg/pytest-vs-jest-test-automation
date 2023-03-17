@@ -53,7 +53,8 @@ In the `jest` folder, you'll find the implementation of the test cases using Nod
 ![npm](https://img.shields.io/npm/dm/jest.svg) ![npm](https://img.shields.io/npm/v/jest.svg)
 #### [Playwright](https://playwright.dev)
 ![npm](https://img.shields.io/npm/dm/allure-playwright.svg) ![npm](https://img.shields.io/npm/v/allure-playwright.svg) 
-#### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) reporting plugin ![npm](https://img.shields.io/npm/dm/jest-stare.svg) ![npm](https://img.shields.io/npm/v/jest-stare.svg) 
+#### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) reporting plugin
+![npm](https://img.shields.io/npm/dm/jest-stare.svg) ![npm](https://img.shields.io/npm/v/jest-stare.svg) 
 
 ### Setup and Execution
 
