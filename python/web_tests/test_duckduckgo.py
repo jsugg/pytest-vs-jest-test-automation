@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from web_tests.pages.duckduckgo_page import DuckDuckGoPage
 
+@pytest.mark.flaky(retries=5)
 def test_duckduckgo_search(driver):
     duckduckgo_page = DuckDuckGoPage(driver)
     duckduckgo_page.load()
@@ -16,8 +17,6 @@ def test_duckduckgo_search(driver):
         if first_result:
             assert first_result.get_attribute('href') == "https://www.football-data.org/"
         else:
-            pytest.fail("No search results found.")
-    except TimeoutException:
-        pytest.fail("Timeout waiting for search results.")
-    except Exception:
-        pytest.fail("No search results found.")
+            pytest.fail("The expected website was not the first search result.")
+    except Exception as e:
+        pytest.fail(f"Caught a {type(e)}. Cause: {e.__traceback__}")
