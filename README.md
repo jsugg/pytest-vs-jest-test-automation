@@ -21,7 +21,7 @@ Automation is an essential aspect of software development, especially when it co
 The two test cases that we will automate using Python and Javascript are:
 
 1. **Test case 1**: Automatically verify that the search engine DuckDuckGo correctly finds and displays the [expected website](https://www.football-data.org/) when searching for `The dev-friendly football API`.
-2. **Test case 2**: Ensure that a football data website's REST API service works correctly by checking a three different response statusses.
+2. **Test case 2**: Ensure that a football data [website's REST API](https://api.football-data.org/v2) service works correctly by checking a three different response statusses.
 
 ## Python Implementation
 
@@ -29,7 +29,7 @@ In the `pytest` folder, you'll find the implementation of the test scenarios usi
 
 ### Dependencies
 
-- PyTest Framework
+- ![pypi](https://img.shields.io/pypi/v/pytest.svg) PyTest Framework
 - Selenium Webdriver
 - PyTest Xdist reporting plugin
 
