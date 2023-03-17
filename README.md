@@ -25,43 +25,43 @@ The two test cases that we will automate using Python and Javascript are:
 
 ## Python Implementation
 
-In the `python` folder, you'll find the implementation of the test scenarios using Python. We've chosen the popular Selenium WebDriver library for automating the scenarios.
+In the `pytest` folder, you'll find the implementation of the test scenarios using Python. We've chosen the popular Selenium WebDriver library for automating the scenarios.
 
 ### Dependencies
 
-- Python 3.x
 - PyTest Framework
-- PyTest Xdist Plugin
-- Selenium WebDriver
-- Requests HTTP Library
-- Webdriver Manager
+- Selenium Webdriver
+- PyTest Xdist reporting plugin
+
 
 ### Setup and Execution
 
 1. Install Python3 and necessary dependencies.
-2. Navigate to the `python` folder.
-3. Install the project-specific necessary dependencies by running `pip install -r requirements.txt`.
-4. Execute the test script by running `pytest -n 2 --html=report.html`.
+2. Navigate to the `pytest` folder.
+3. Install the project-specific dependencies by running `pip install -r requirements.txt`.
+4. Execute the test script by running `pytest -n 2`. To generate a test report run `pytest -n 2 --html=report.html`
+Note: the -n 2 flag indicates the number of parallel runners to be used. The report will be saved to the project's root folder.
 
-## Javascript Implementation [TBD]
+## Javascript Implementation
 
-In the `nodejs` folder, you'll find the implementation of the test cases using NodeJS. I've chosen the popular Playwright API and Jest Testing Framework for automating the test cases.
+In the `jest` folder, you'll find the implementation of the test cases using NodeJS with Jest. I've chosen the popular Playwright API and Jest Testing Framework for automating the test cases.
 
-### Dependencies [TBD]
+### Dependencies
 
 - NodeJS
-- ChromeDriver
-- Playwright API
 - Jest Testing Framework
-- Allure Reports JS
+- Playwright API
+- Jest Stare reporting plugin
 
-### Setup and Execution [TBD]
+### Setup and Execution
 
-1. Install Node.js and necessary dependencies.
-2. Navigate to the `nodejs` folder.
-3. Execute the test script by running `node test_cases.js`.
+1. Install Node and necessary dependencies.
+2. Navigate to the `jest` folder.
+3. Install the project dependencies by running `npm install`.
+3. Execute the test script by running `npm run test`. To generate a test report run `npm run test:report`.
+Note: the report will be saved to the jest-stared folder.
 
-## Results and Analysis [TBD]
+## Results and Analysis
 
 ### Execution Time
 Pytest + Selenium: Pytest, when combined with Selenium, can sometimes exhibit slower test execution times. This is mainly due to the overhead associated with running and managing multiple browser instances, especially when testing heavy web applications.
@@ -105,11 +105,11 @@ Requires proficiency in JavaScript (NodeJS) instead of Python
 The ecosystem is relatively newer compared to Pytest + Selenium
 
 
-## Conclusion [TBD]
+## Conclusion
 
 The choice between these two test automation setups largely depends on the specific requirements, existing skillsets, and priorities of the development team. Pytest + Selenium might be better suited for teams with Python expertise and a need for extensive customization, while Jest + Playwright could be a better choice for teams focused on fast test execution times and a more modern, user-friendly API.
 
-## License [TBD]
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
