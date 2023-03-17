@@ -30,11 +30,11 @@ In the `pytest` folder, you'll find the implementation of the test scenarios usi
 ### Dependencies
 
 #### [PyTest Framework](https://docs.pytest.org/en/latest/)
-![pypi](https://img.shields.io/pypi/v/pytest.svg)
+![pypi](https://img.shields.io/pypi/v/pytest.svg) ![pypi](https://img.shields.io/pypi/dm/pytest.svg)
 #### [Selenium bindings for Python](https://www.selenium.dev)
-![pypi](https://img.shields.io/pypi/v/selenium.svg)
+![pypi](https://img.shields.io/pypi/v/selenium.svg) ![pypi](https://img.shields.io/pypi/dm/selenium.svg)
 #### [PyTest Xdist reporting plugin](https://github.com/pytest-dev/pytest-xdist/blob/master/README.rst)
-![pypi](https://img.shields.io/pypi/v/pytest-xdist.svg)
+![pypi](https://img.shields.io/pypi/v/pytest-xdist.svg) ![pypi](https://img.shields.io/pypi/dm/pytest-xdist.svg)
 
 
 ### Setup and Execution
@@ -53,11 +53,11 @@ In the `jest` folder, you'll find the implementation of the test cases using Nod
 
 #### [NodeJS](https://nodejs.org)
 #### [Jest Testing Framework](https://jestjs.io/)
-![npm](https://img.shields.io/npm/dm/jest.svg) ![npm](https://img.shields.io/npm/v/jest.svg)
+![npm](https://img.shields.io/npm/v/jest.svg) ![npm](https://img.shields.io/npm/dm/jest.svg)
 #### [Playwright](https://playwright.dev)
-![npm](https://img.shields.io/npm/dm/allure-playwright.svg) ![npm](https://img.shields.io/npm/v/allure-playwright.svg) 
+![npm](https://img.shields.io/npm/v/allure-playwright.svg) ![npm](https://img.shields.io/npm/dm/allure-playwright.svg) 
 #### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) reporting plugin
-![npm](https://img.shields.io/npm/dm/jest-stare.svg) ![npm](https://img.shields.io/npm/v/jest-stare.svg) 
+![npm](https://img.shields.io/npm/v/jest-stare.svg) ![npm](https://img.shields.io/npm/dm/jest-stare.svg) 
 
 ### Setup and Execution
 
