@@ -29,11 +29,11 @@ In the `pytest` folder, you'll find the implementation of the test scenarios usi
 
 ### Dependencies
 
-#### PyTest Framework
+#### [PyTest Framework](https://docs.pytest.org/en/latest/)
 ![pypi](https://img.shields.io/pypi/v/pytest.svg)
-#### Selenium
+#### [Selenium bindings for Python](https://www.selenium.dev)
 ![pypi](https://img.shields.io/pypi/v/selenium.svg)
-#### PyTest Xdist reporting plugin
+#### [PyTest Xdist reporting plugin](https://github.com/pytest-dev/pytest-xdist/blob/master/README.rst)
 ![pypi](https://img.shields.io/pypi/v/pytest-xdist.svg)
 
 
