@@ -52,6 +52,7 @@ In the `jest` folder, you'll find the implementation of the test cases using Nod
 ### Dependencies
 
 #### [NodeJS](https://nodejs.org)
+![gh](https://avatars.githubusercontent.com/u/9950313?s=40)
 #### [Jest Testing Framework](https://jestjs.io/)
 ![npm](https://img.shields.io/npm/v/jest.svg) ![npm](https://img.shields.io/npm/dm/jest.svg)
 #### [Playwright](https://playwright.dev)
