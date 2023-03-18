@@ -37,10 +37,11 @@ In the `pytest/` folder, you'll find the Python implementation for the test scen
 
 ### Usage
 #### Setup and execution
-1. Install Python3 and necessary dependencies.
-2. Navigate to the `pytest/` folder.
-3. Install the project-specific dependencies by running `pip install -r requirements.txt`.
-4. Execute the test script by running `pytest -n 2`.
+1. [Install Python3](https://www.python.org/downloads/).
+2. Clone this repository.
+3. Navigate to the `pytest/` folder.
+4. Install the project dependencies by running `pip install -r requirements.txt`.
+5. Execute the test script by running `pytest -n 2`.
 
 #### Parallel test execution
 By **default**, Pytest will run the tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
@@ -75,10 +76,11 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 
 ### Usage
 
-1. Install Node and necessary dependencies.
-2. Navigate to the `jest/` folder.
-3. Install the project dependencies by running `npm install`.
-3. Execute the test script by running `npm run test`.
+1. [Install Node](https://nodejs.org/en/download).
+2. Clone this repository.
+3. Navigate to the `jest/` folder.
+4. Install the project dependencies by running `npm install`.
+5. Execute the test script by running `npm run test`.
 
 #### Parallel test execution
 **By default**, Jest will run the tests **in parallel**, allocating available CPU cores for the test scenarios.
