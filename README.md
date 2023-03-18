@@ -45,18 +45,24 @@ In the `pytest/` folder, you'll find the Python implementation for the test scen
 5. Execute the test scripts by running `pytest -n 2`.
 
 #### :fast_forward: Parallel execution
-By **default**, Pytest will run the tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
-```pytest -n 2```
+By **default**, Pytest runs tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
+```
+pytest -n 2
+```
 will run the tests allocating two CPU cores.
 
-If you want to dinamically allocate available CPU cores for the tests, pass ``auto`` instead of number of threads.
-```pytest -n auto```
+If you want to dinamically allocate the available CPU cores for parallel execution, pass ``auto`` instead of *number of cores*.
+```
+pytest -n auto
+```
 
 ___Note___: PyTest uses pytest-xdist to enable parallel runs. To date, pytest-xdist utilizes the number of available logical cores instead of physical cores. You can overcome this limitation by installing an additional dependency (e.g., psutil).
 
 #### :clipboard: Reporting
 Passing the `--html` flag followed by `=` and a `filename.html`, will create a test report HTML file named _filename.html_.
-```pytest --html=report.html```
+```
+pytest --html=report.html
+```
 
 * The report will be saved in the folder where the command was run.
 
@@ -85,7 +91,7 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 5. Execute the test scripts by running `npm run test`.
 
 #### :fast_forward: Parallel execution
-:point_right: **_By default_**, Jest will run the tests **_in parallel_**, allocating available CPU cores for the test scenarios.
+:point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution.
 
 If you want to run your tests **_sequentially_**, run
 ```
