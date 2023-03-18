@@ -85,9 +85,9 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 5. Execute the test scripts by running `npm run test`.
 
 #### :fast_forward: Parallel execution
-**By default**, Jest will run the tests **in parallel**, allocating available CPU cores for the test scenarios.
+**__By default__**, Jest will run the tests **__in parallel__**, allocating available CPU cores for the test scenarios.
 
-If you want to run your tests **sequentially**, run
+If you want to run your tests **__sequentially__**, run
 ```
 npm start test:sequence
 ```
