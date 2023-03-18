@@ -6,8 +6,8 @@ This repository contains educational content on using two popular Test Automatio
 
 1. [Introduction](#introduction)
 2. [Test Scenarios](#test-scenarios)
-3. [Python Implementation](#python-implementation)
-4. [Javascript Implementation](#javascript-implementation)
+3. [Pytest Implementation](#python-implementation)
+4. [Jest Implementation](#javascript-implementation)
 5. [Results and Analysis](#results-and-analysis)
 6. [Conclusion](#conclusion)
 7. [License](#license)
@@ -21,8 +21,9 @@ Automation is an essential aspect of software development, especially regarding 
 1. **Test scenario 1**: Verify that the search engine [DuckDuckGo](duckduckgo.com) finds and displays the [expected website](https://www.football-data.org/) in the first place when searching for `The dev-friendly football API`.
 2. **Test scenario 2**: Verify that the Football-data [website's REST API](https://api.football-data.org/v2) responds properly to requests made up to receive different response statusses.
 
-## ![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)  Python Implementation
-
+## Python Implementation
+![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)
+ 
 In the `pytest/` folder, you'll find the Python implementation for the test scenarios. I chose the **Pytest Framework**, and the popular **Selenium WebDriver** API to automate the DuckDuckGo testing scenario.
 
 ### Dependencies
@@ -59,7 +60,8 @@ Passing the `--html` flag followed by `=` and a `filename.html`, will create a t
 
 * The report will be saved in the folder where the command was run.
 
-## ![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)  JavaScript Implementation
+## JavaScript Implementation
+![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)
 
 In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's **Jest Framework**, and used Microsoft's popular **Playwright API** to automate the DuckDuckGo testing scenario.
 
