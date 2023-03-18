@@ -56,8 +56,6 @@ If you want to dinamically allocate the available CPU cores for parallel executi
 pytest -n auto
 ```
 
-___Note___: PyTest uses pytest-xdist to enable parallel runs. To date, pytest-xdist utilizes the number of available logical cores instead of physical cores. You can overcome this limitation by installing an additional dependency (e.g., psutil).
-
 #### :clipboard: Reporting
 Passing the `--html` flag followed by `=` and a `filename.html`, will create a test report HTML file named _filename.html_.
 ```
@@ -91,7 +89,7 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 5. Execute the test scripts by running `npm run test`.
 
 #### :fast_forward: Parallel execution
-:point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution.
+:point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution based on heuristics to optimize performance.
 
 If you want to run your tests **_sequentially_**, run
 ```
