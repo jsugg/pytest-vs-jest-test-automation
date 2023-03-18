@@ -114,32 +114,38 @@ npm run test:sequence:report
 
 * The report will be saved in the `<project_root>/jest-stared/` folder.
 
+
 ## Results and Analysis
 
 ### Execution Time
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest, when combined with Selenium, can sometimes exhibit slower test execution times. This is mainly due to the overhead associated with running and managing multiple browser instances, especially when testing heavy web applications.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest and Playwright usually deliver faster test execution times compared to the Pytest-Selenium combination. Playwright is designed to run tests concurrently in different browser contexts, allowing it to perform faster overall.
+<br/>
 
 ### Ease of Use
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest is a popular testing framework in the Python ecosystem, known for its simplicity and ease of use. However, using Selenium can sometimes be more complex due to its extensive API and the need to manage browser drivers.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest is also an easy-to-use testing framework in the JavaScript world, and Playwright simplifies browser automation. The API is more user-friendly and less verbose than Selenium's, making it easier to write and maintain tests.
+<br/>
 
 ### Flexibility
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest is highly flexible, with a vast number of plugins available for customization. Selenium supports multiple browsers and platforms, but it can be more challenging to set up and maintain a stable environment.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest is a flexible testing framework, and Playwright also supports multiple browsers. Although the number of plugins may be fewer than with Pytest, the combination of Jest and Playwright offers a more modern and streamlined approach to testing web applications.
+<br/>
 
 ### Pros and Cons
 
 #### Pytest + Selenium
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/82px-Pytest_logo.svg.png) <img src="https://selenium.dev/images/selenium_logo_square_green.png" width="60" alt="Selenium"/>
+
 ##### Pros
 Well-established, mature, and widely-used Python testing framework
 Extensive community support and available plugins
@@ -149,8 +155,10 @@ Selenium supports a wide range of browsers and platforms
 Slower test execution time compared to Jest + Playwright
 More complex and verbose API, making it harder to write and maintain tests
 Can be challenging to set up and maintain a stable environment
+<br/>
 
 #### Jest + Playwright
+![img](https://cdn.iconscout.com/icon/free/png-64/jest-3629451-3031514.png) <img src='https://github.githubassets.com/images/icons/emoji/unicode/1f3ad.png' width='65'/>
 
 ##### Pros
 Fast test execution time
