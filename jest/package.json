@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:report": "jest --reporters default jest-stare"
+    "test:sequence": "jest --runInBand",
+    "test:report": "jest --reporters default jest-stare",
+    "test:sequence:report": "jest --runInBand --reporters default jest-stare"
   },
   "keywords": [],
   "author": "Juan Sugg",

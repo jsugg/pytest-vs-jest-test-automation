@@ -18,7 +18,7 @@ afterEach(async () => {
   await closePage(page);
 });
 
-describe('Test the DuckDuckGo search', () => {
+describe('Test DuckDuckGo search', () => {
   jest.retryTimes(5);
   test('Search for "The dev-friendly football API" and check first result', async () => {
     const searchPage = new DuckDuckGoSearchPage();
