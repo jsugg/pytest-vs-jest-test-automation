@@ -14,7 +14,7 @@ This repository contains educational content on using two popular Test Automatio
 
 ## Introduction
 
-Automation is an essential aspect of software development, especially regarding testing. I will compare the two widely-used setups, Pytest Framework using Selenium to Jest Framework using Playwright, and automate two simple test scenarios in this repository. I will evaluate their ease of use, performance, and flexibility to determine which language offers the best test automation experience.
+Automation is an essential aspect of software development, especially regarding testing. I will compare the two widely-used setups and automate two simple test scenarios in this repository. I will evaluate their ease of use, performance, and flexibility to determine which language offers the best test automation experience.
 
 ## Test Scenarios
 
@@ -23,7 +23,7 @@ Automation is an essential aspect of software development, especially regarding 
 
 ## ![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)  Python Implementation
 
-In the `pytest/` folder, you'll find the Python implementation for the test scenarios. I chose the PyTest Framework, and the popular Selenium WebDriver API to automate the DuckDuckGo testing scenario.
+In the `pytest/` folder, you'll find the Python implementation for the test scenarios. I chose the ::Pytest Framework::, and the popular ::Selenium WebDriver:: API to automate the DuckDuckGo testing scenario.
 
 ### Dependencies
 
@@ -61,7 +61,7 @@ Passing the `--html` flag followed by `=` and a `filename.html`, will create a t
 
 ## ![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)  JavaScript Implementation
 
-In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's Jest Framework, and used Microsoft's popular Playwright API to automate the DuckDuckGo testing scenario.
+In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's ::Jest Framework::, and used Microsoft's popular ::Playwright API:: to automate the DuckDuckGo testing scenario.
 
 ### Dependencies
 
