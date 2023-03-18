@@ -29,7 +29,7 @@ In the `pytest/` folder, you'll find the Python implementation for the test scen
 
 #### [PyTest Framework](https://docs.pytest.org/en/latest/)
 ![pypi](https://img.shields.io/pypi/v/pytest.svg) ![pypi](https://img.shields.io/pypi/dm/pytest.svg)
-#### [Selenium bindings for Python](https://www.selenium.dev)
+#### [Selenium](https://www.selenium.dev)
 ![pypi](https://img.shields.io/pypi/v/selenium.svg) ![pypi](https://img.shields.io/pypi/dm/selenium.svg)
 #### [PyTest Xdist](https://github.com/pytest-dev/pytest-xdist/blob/master/README.rst) plugin
 ![pypi](https://img.shields.io/pypi/v/pytest-xdist.svg) ![pypi](https://img.shields.io/pypi/dm/pytest-xdist.svg)
