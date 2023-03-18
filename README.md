@@ -23,9 +23,7 @@ The two test cases that we will automate using Python and Javascript are:
 1. **Test case 1**: Automatically verify that the search engine DuckDuckGo correctly finds and displays the [expected website](https://www.football-data.org/) when searching for `The dev-friendly football API`.
 2. **Test case 2**: Ensure that a football data [website's REST API](https://api.football-data.org/v2) service works correctly by checking a three different response statusses.
 
-## Python Implementation
-![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=50)
-![img](https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg)
+## ![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40) Python Implementation
 
 In the `pytest` folder, you'll find the implementation of the test scenarios using Python. We've chosen the popular Selenium WebDriver library for automating the scenarios.
 
@@ -47,8 +45,8 @@ In the `pytest` folder, you'll find the implementation of the test scenarios usi
 4. Execute the test script by running `pytest -n 2`. To generate a test report run `pytest -n 2 --html=report.html`
 Note: the -n 2 flag indicates the number of parallel runners to be used. The report will be saved to the project's root folder.
 
-## Javascript Implementation
-![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=50)
+## ![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40) Javascript Implementation
+
 
 In the `jest` folder, you'll find the implementation of the test cases using NodeJS with Jest. I've chosen the popular Playwright API and Jest Testing Framework for automating the test cases.
 
