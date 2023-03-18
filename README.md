@@ -1,65 +1,114 @@
-# Comparing PyTest + Selenium with NodeJS + Playwright + Jest for Automating Simple Test Scenarios
+# Pytest-Selenium :vs: Jest-Playwright
 
-This repository contains a comparison of using Python and Javascript to automate simple test cases. The purpose is to evaluate the ease of use, performance, and flexibility of both languages and their respective frameworks for test automation.
+This repository contains educational content on using two popular Test Automation Frameworks, including source code implementing automation for two simple test scenarios. The purpose is to evaluate the ease of use, performance, and flexibility.
 
-## Table of Contents
+## :scroll: Table of Contents
 
 1. [Introduction](#introduction)
 2. [Test Scenarios](#test-scenarios)
-3. [Python Implementation](#python-implementation)
-4. [Javascript Implementation](#javascript-implementation)
+3. [Pytest Implementation](#python-implementation)
+4. [Jest Implementation](#javascript-implementation)
 5. [Results and Analysis](#results-and-analysis)
 6. [Conclusion](#conclusion)
 7. [License](#license)
 
 ## Introduction
 
-Automation is an essential aspect of software development, especially when it comes to testing. In this repository, we will compare Python using PyTest Framework and Javascript using NodeJS + Jest + Playwright API for automating two simple test cases. We will evaluate their respective ease of use, performance, and flexibility to determine which language offers the best test automation experience.
+Automation is an essential aspect of software development, especially regarding testing. I will compare the two widely-used setups and automate two simple test scenarios in this repository. I will evaluate their ease of use, performance, and flexibility to determine which language offers the best test automation experience.
 
-## Test Cases
+## Test Scenarios
 
-The two test cases that we will automate using Python and Javascript are:
-
-1. **Test case 1**: Automatically verify that the search engine DuckDuckGo correctly finds and displays the [expected website](https://www.football-data.org/) when searching for `The dev-friendly football API`.
-2. **Test case 2**: Ensure that a football data website's REST API service works correctly by checking a three different response statusses.
+1. **Test scenario 1**: Verify that the search engine [DuckDuckGo](duckduckgo.com) finds and displays the [expected website](https://www.football-data.org/) in the first place when searching for `The dev-friendly football API`.
+2. **Test scenario 2**: Verify that the Football-data [website's REST API](https://api.football-data.org/v2) responds properly to requests made up to receive different response statusses.
 
 ## Python Implementation
-
-In the `pytest` folder, you'll find the implementation of the test scenarios using Python. We've chosen the popular Selenium WebDriver library for automating the scenarios.
-
-### Dependencies
-
-- PyTest Framework
-- Selenium Webdriver
-- PyTest Xdist reporting plugin
-
-
-### Setup and Execution
-
-1. Install Python3 and necessary dependencies.
-2. Navigate to the `pytest` folder.
-3. Install the project-specific dependencies by running `pip install -r requirements.txt`.
-4. Execute the test script by running `pytest -n 2`. To generate a test report run `pytest -n 2 --html=report.html`
-Note: the -n 2 flag indicates the number of parallel runners to be used. The report will be saved to the project's root folder.
-
-## Javascript Implementation
-
-In the `jest` folder, you'll find the implementation of the test cases using NodeJS with Jest. I've chosen the popular Playwright API and Jest Testing Framework for automating the test cases.
+![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)
+ 
+In the `pytest/` folder, you'll find the Python implementation for the test scenarios. I chose the **Pytest Framework**, and the popular **Selenium WebDriver** API to automate the DuckDuckGo testing scenario.
 
 ### Dependencies
 
-- NodeJS
-- Jest Testing Framework
-- Playwright API
-- Jest Stare reporting plugin
+#### [PyTest Framework](https://docs.pytest.org/en/latest/)
+![pypi](https://img.shields.io/pypi/v/pytest.svg) ![pypi](https://img.shields.io/pypi/dm/pytest.svg)
+#### [Selenium](https://www.selenium.dev)
+![pypi](https://img.shields.io/pypi/v/selenium.svg) ![pypi](https://img.shields.io/pypi/dm/selenium.svg)
+#### [PyTest Xdist](https://github.com/pytest-dev/pytest-xdist/blob/master/README.rst) plugin
+![pypi](https://img.shields.io/pypi/v/pytest-xdist.svg) ![pypi](https://img.shields.io/pypi/dm/pytest-xdist.svg)
 
-### Setup and Execution
 
-1. Install Node and necessary dependencies.
-2. Navigate to the `jest` folder.
-3. Install the project dependencies by running `npm install`.
-3. Execute the test script by running `npm run test`. To generate a test report run `npm run test:report`.
-Note: the report will be saved to the jest-stared folder.
+### Usage
+#### :arrow_forward: Set up and run
+1. [Install Python3](https://www.python.org/downloads/).
+2. Clone this repository.
+3. Navigate to the `pytest/` folder.
+4. Install the project dependencies by running `pip install -r requirements.txt`.
+5. Execute the test scripts by running `pytest -n 2`.
+
+#### :fast_forward: Parallel execution
+By **default**, Pytest will run the tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
+```pytest -n 2```
+will run the tests allocating two CPU cores.
+
+If you want to dinamically allocate available CPU cores for the tests, pass ``auto`` instead of number of threads.
+```pytest -n auto```
+
+___Note___: PyTest uses pytest-xdist to enable parallel runs. To date, pytest-xdist utilizes the number of available logical cores instead of physical cores. You can overcome this limitation by installing an additional dependency (e.g., psutil).
+
+#### :clipboard: Reporting
+Passing the `--html` flag followed by `=` and a `filename.html`, will create a test report HTML file named _filename.html_.
+```pytest --html=report.html```
+
+* The report will be saved in the folder where the command was run.
+
+## JavaScript Implementation
+![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)
+
+In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's **Jest Framework**, and used Microsoft's popular **Playwright API** to automate the DuckDuckGo testing scenario.
+
+### Dependencies
+
+#### [NodeJS](https://nodejs.org)
+![gh](https://avatars.githubusercontent.com/u/9950313?s=40)
+#### [Jest Framework](https://jestjs.io/)
+![npm](https://img.shields.io/npm/v/jest.svg) ![npm](https://img.shields.io/npm/dm/jest.svg)
+#### [Playwright](https://playwright.dev)
+![npm](https://img.shields.io/npm/v/allure-playwright.svg) ![npm](https://img.shields.io/npm/dm/allure-playwright.svg) 
+#### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) plugin
+![npm](https://img.shields.io/npm/v/jest-stare.svg) ![npm](https://img.shields.io/npm/dm/jest-stare.svg) 
+
+### Usage
+#### :arrow_forward: Set up and run
+1. [Install Node](https://nodejs.org/en/download).
+2. Clone this repository.
+3. Navigate to the `jest/` folder.
+4. Install the project dependencies by running `npm install`.
+5. Execute the test scripts by running `npm run test`.
+
+#### :fast_forward: Parallel execution
+:point_right: **_By default_**, Jest will run the tests **_in parallel_**, allocating available CPU cores for the test scenarios.
+
+If you want to run your tests **_sequentially_**, run
+```
+npm start test:sequence
+```
+
+Or alternatively run 
+```
+npm test -- --runInBand
+```
+
+#### :clipboard: Reporting
+To generate a test report run
+```
+npm run test:report
+```
+
+Or alternativelly run 
+```
+npm run test:sequence:report
+```
+
+* The report will be saved in the `<project_root>/jest-stared/` folder.
 
 ## Results and Analysis
 
