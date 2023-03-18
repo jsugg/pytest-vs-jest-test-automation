@@ -1,4 +1,4 @@
-# Comparing Pytest-Selenium :vs: Jest-Playwright
+# Pytest-Selenium :vs: Jest-Playwright
 
 This repository contains educational content on using two popular Test Automation Frameworks, including source code implementing automation for two simple test scenarios. The purpose is to evaluate the ease of use, performance, and flexibility.
 
