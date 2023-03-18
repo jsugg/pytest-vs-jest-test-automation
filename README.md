@@ -23,7 +23,7 @@ The two test cases that we will automate using Python and Javascript are:
 1. **Test case 1**: Automatically verify that the search engine DuckDuckGo correctly finds and displays the [expected website](https://www.football-data.org/) when searching for `The dev-friendly football API`.
 2. **Test case 2**: Ensure that a football data [website's REST API](https://api.football-data.org/v2) service works correctly by checking a three different response statusses.
 
-## Python Implementation
+## ![img](https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg) Python Implementation
 
 In the `pytest` folder, you'll find the implementation of the test scenarios using Python. We've chosen the popular Selenium WebDriver library for automating the scenarios.
 
