@@ -65,7 +65,7 @@ pytest --html=report.html
 * The report will be saved in the folder where the command was run.
 
 ## JavaScript Implementation
-![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)
+![img](https://cdn.icon-icons.com/icons2/2415/PNG/64/javascript_original_logo_icon_146455.png)
 
 In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's **Jest Framework**, and used Microsoft's popular **Playwright API** to automate the DuckDuckGo testing scenario.
 
