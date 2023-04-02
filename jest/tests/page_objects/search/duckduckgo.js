@@ -1,4 +1,8 @@
 class DuckDuckGoSearchPage {
+    constructor(page) { 
+      this.page = page;
+    }
+
     async open(page) {
       this.page = page;
       await this.page.goto('https://duckduckgo.com/');
@@ -11,8 +15,13 @@ class DuckDuckGoSearchPage {
   
     async getFirstResult() {
       const firstResultSelector = '#r1-0 > div > h2 > a';
-      await page.waitForSelector(firstResultSelector, { timeout: 10000 });
-      return await this.page.$(firstResultSelector);
+      try {
+        await this.page.waitForSelector(firstResultSelector, { timeout: 5000 });
+      } catch (error) {
+        console.log(error);
+        return error;
+      }
+      return this.page.$(firstResultSelector)? this.page.$(firstResultSelector): null;
     }
   }
   

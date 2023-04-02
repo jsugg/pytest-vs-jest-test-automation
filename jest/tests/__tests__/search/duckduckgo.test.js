@@ -21,11 +21,11 @@ afterEach(async () => {
 describe('Test DuckDuckGo search', () => {
   jest.retryTimes(5);
   test('Search for "The dev-friendly football API" and check first result', async () => {
-    const searchPage = new DuckDuckGoSearchPage();
+    const searchPage = new DuckDuckGoSearchPage(page);
     await searchPage.open(page);
     await searchPage.search('The dev-friendly football API');
 
-    const firstResult = await searchPage.getFirstResult();
+    const firstResult = await searchPage.getFirstResult(page);
     expect(firstResult).toBeTruthy();
     const href = await firstResult.getAttribute('href');
     expect(href).toBe('https://www.football-data.org/');

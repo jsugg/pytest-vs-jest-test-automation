@@ -6,7 +6,6 @@ class TestFootballAPI {
   }
 
   async request(path, headers = {}) {
-
     return new Promise((resolve, reject) => {
       https.get(`${this.base_url}${path}`, { headers, agent: this.agent }, (res) => {
         const chunks = [];
