@@ -45,23 +45,27 @@ In the `pytest/` folder, you'll find the Python implementation for the test scen
 5. Execute the test scripts by running `pytest -n 2`.
 
 #### :fast_forward: Parallel execution
-By **default**, Pytest will run the tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
-```pytest -n 2```
+By **default**, Pytest runs tests **sequentially**. To run tests in parallel, pass the `-n` flag followed by the *number of cores* to allocate.
+```
+pytest -n 2
+```
 will run the tests allocating two CPU cores.
 
-If you want to dinamically allocate available CPU cores for the tests, pass ``auto`` instead of number of threads.
-```pytest -n auto```
-
-___Note___: PyTest uses pytest-xdist to enable parallel runs. To date, pytest-xdist utilizes the number of available logical cores instead of physical cores. You can overcome this limitation by installing an additional dependency (e.g., psutil).
+If you want to dinamically allocate the available CPU cores for parallel execution, pass ``auto`` instead of *number of cores*.
+```
+pytest -n auto
+```
 
 #### :clipboard: Reporting
 Passing the `--html` flag followed by `=` and a `filename.html`, will create a test report HTML file named _filename.html_.
-```pytest --html=report.html```
+```
+pytest --html=report.html
+```
 
 * The report will be saved in the folder where the command was run.
 
 ## JavaScript Implementation
-![img](https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=40)
+![img](https://cdn.icon-icons.com/icons2/2415/PNG/64/javascript_original_logo_icon_146455.png)
 
 In the `jest/` folder, you'll find the JavaScript implementation for the test scenarios. I chose Facebook's **Jest Framework**, and used Microsoft's popular **Playwright API** to automate the DuckDuckGo testing scenario.
 
@@ -85,7 +89,7 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 5. Execute the test scripts by running `npm run test`.
 
 #### :fast_forward: Parallel execution
-:point_right: **_By default_**, Jest will run the tests **_in parallel_**, allocating available CPU cores for the test scenarios.
+:point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution based on heuristics to optimize performance.
 
 If you want to run your tests **_sequentially_**, run
 ```
@@ -110,32 +114,38 @@ npm run test:sequence:report
 
 * The report will be saved in the `<project_root>/jest-stared/` folder.
 
+
 ## Results and Analysis
 
 ### Execution Time
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest, when combined with Selenium, can sometimes exhibit slower test execution times. This is mainly due to the overhead associated with running and managing multiple browser instances, especially when testing heavy web applications.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest and Playwright usually deliver faster test execution times compared to the Pytest-Selenium combination. Playwright is designed to run tests concurrently in different browser contexts, allowing it to perform faster overall.
+<br/>
 
 ### Ease of Use
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest is a popular testing framework in the Python ecosystem, known for its simplicity and ease of use. However, using Selenium can sometimes be more complex due to its extensive API and the need to manage browser drivers.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest is also an easy-to-use testing framework in the JavaScript world, and Playwright simplifies browser automation. The API is more user-friendly and less verbose than Selenium's, making it easier to write and maintain tests.
+<br/>
 
 ### Flexibility
-#### Pytest + Selenium
+#### ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/20px-Pytest_logo.svg.png) Pytest + Selenium
 Pytest is highly flexible, with a vast number of plugins available for customization. Selenium supports multiple browsers and platforms, but it can be more challenging to set up and maintain a stable environment.
 
-#### Jest + Playwright
+#### ![img](https://cdn.iconscout.com/icon/free/png-16/jest-3629451-3031514.png') Jest + Playwright
 Jest is a flexible testing framework, and Playwright also supports multiple browsers. Although the number of plugins may be fewer than with Pytest, the combination of Jest and Playwright offers a more modern and streamlined approach to testing web applications.
+<br/>
 
 ### Pros and Cons
 
 #### Pytest + Selenium
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pytest_logo.svg/82px-Pytest_logo.svg.png) <img src="https://selenium.dev/images/selenium_logo_square_green.png" width="60" alt="Selenium"/>
+
 ##### Pros
 Well-established, mature, and widely-used Python testing framework
 Extensive community support and available plugins
@@ -145,8 +155,10 @@ Selenium supports a wide range of browsers and platforms
 Slower test execution time compared to Jest + Playwright
 More complex and verbose API, making it harder to write and maintain tests
 Can be challenging to set up and maintain a stable environment
+<br/>
 
 #### Jest + Playwright
+![img](https://cdn.iconscout.com/icon/free/png-64/jest-3629451-3031514.png) <img src='https://github.githubassets.com/images/icons/emoji/unicode/1f3ad.png' width='65'/>
 
 ##### Pros
 Fast test execution time
