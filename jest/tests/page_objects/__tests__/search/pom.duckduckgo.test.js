@@ -48,10 +48,10 @@ describe('DuckDuckGoSearchPage', () => {
 
   test('getFirstResult() throws error if search result not found after timeout', async () => {
     page.waitForSelector = jest.fn(() => {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         setTimeout(() => {
           return new Error();});
-        }, 6000);
+        }, 11000);
       });
     const searchPage = new DuckDuckGoSearchPage(page);
     expect(searchPage.getFirstResult()).rejects.toThrow();

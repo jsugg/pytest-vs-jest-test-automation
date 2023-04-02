@@ -56,7 +56,5 @@ describe('TestFootballAPI', () => {
     api.request.mockReturnValueOnce(response);
     await api.getCompetitionsUnauthorized();
     expect(api.request).toHaveBeenCalledWith('/competitions', expect.any(Object));
-    console.log(`Mocked response: ${JSON.stringify(response)}`);
-    console.log(`Actual response: ${api.request}`);
   });
 });
