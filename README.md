@@ -1,3 +1,5 @@
+[![Run Tests on Pull Requests](https://github.com/jsugg/pytest-vs-jest-test-automation/actions/workflows/main.yml/badge.svg)](https://github.com/jsugg/pytest-vs-jest-test-automation/actions/workflows/main.yml)
+
 # Pytest-Selenium :vs: Jest-Playwright
 
 This repository provides an in-depth comparative study of two leading test automation frameworks: Pytest with Selenium and Jest with Playwright. It aims to evaluate and contrast their ease of use, performance, and flexibility in real-world testing scenarios.
