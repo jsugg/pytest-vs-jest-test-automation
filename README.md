@@ -78,7 +78,10 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 #### [Playwright](https://playwright.dev)
 ![npm](https://img.shields.io/npm/v/allure-playwright.svg) ![npm](https://img.shields.io/npm/dm/allure-playwright.svg) 
 #### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) plugin
-![npm](https://img.shields.io/npm/v/jest-stare.svg) ![npm](https://img.shields.io/npm/dm/jest-stare.svg) 
+![npm](https://img.shields.io/npm/v/jest-stare.svg) ![npm](https://img.shields.io/npm/dm/jest-stare.svg)
+#### [Typescript](https://www.typescriptlang.org/)
+#### [ts-jest](https://kulshekhar.github.io/ts-jest/)
+
 
 ### Usage
 #### :arrow_forward: Set up and run
@@ -87,6 +90,7 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 3. Navigate to the `jest/` folder.
 4. Install the project dependencies by running `npm install`.
 5. Execute the test scripts by running `npm run test`.
+6. For TypeScript tests, run `npm run test:ts`.
 
 #### :fast_forward: Parallel execution
 :point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution based on heuristics to optimize performance.
