@@ -1,5 +1,5 @@
 const DuckDuckGoSearchPage = require('../../page_objects/search/duckduckgo');
-const { launchBrowser, closeBrowser, newPage, closePage } = require('../../setup');
+const { launchBrowser, closeBrowser, newPage, closePage } = require('../../setup.js');
 
 
 beforeAll(async () => {
@@ -29,5 +29,5 @@ describe('Test DuckDuckGo search', () => {
     expect(firstResult).toBeTruthy();
     const href = await firstResult.getAttribute('href');
     expect(href).toBe('https://www.football-data.org/');
-  }, 10000);
+  }, 30000);
 });

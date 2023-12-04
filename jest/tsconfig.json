@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "rootDir": "./",
+      "baseUrl": "./",
+      "paths": {
+        "*": ["node_modules/*", "tests/*"],
+      },
+      "emitDeclarationOnly": true,
+      "declaration": true,
+      "allowImportingTsExtensions": true,
+      "strict": true
+    },
+      "include": ["node_modules", "tests/**/*.ts"],
+}
