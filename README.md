@@ -1,6 +1,6 @@
 # Pytest-Selenium :vs: Jest-Playwright
 
-This repository contains educational content on using two popular Test Automation Frameworks, including source code implementing automation for two simple test scenarios. The purpose is to evaluate the ease of use, performance, and flexibility.
+This repository provides an in-depth comparative study of two leading test automation frameworks: Pytest with Selenium and Jest with Playwright. It aims to evaluate and contrast their ease of use, performance, and flexibility in real-world testing scenarios.
 
 ## :scroll: Table of Contents
 
@@ -14,12 +14,14 @@ This repository contains educational content on using two popular Test Automatio
 
 ## Introduction
 
-Automation is an essential aspect of software development, especially regarding testing. I will compare the two widely-used setups and automate two simple test scenarios in this repository. I will evaluate their ease of use, performance, and flexibility to determine which language offers the best test automation experience.
+In the rapidly evolving field of software testing, choosing the right automation framework is crucial. This repository serves as a comprehensive guide and practical comparison between Pytest with Selenium and Jest with Playwright, two frontrunners in the automation landscape.
 
 ## Test Scenarios
 
-1. **Test scenario 1**: Verify that the search engine [DuckDuckGo](duckduckgo.com) finds and displays the [expected website](https://www.football-data.org/) in the first place when searching for `The dev-friendly football API`.
-2. **Test scenario 2**: Verify that the Football-data [website's REST API](https://api.football-data.org/v4) responds properly to requests made up to receive different response statusses.
+I have implemented two test scenarios to evaluate each framework:
+
+1. **DuckDuckGo Search Test**: Verify that the search engine [DuckDuckGo](https://duckduckgo.com) finds and displays the [expected website](https://www.football-data.org/) in the first place when searching for `The dev-friendly football API`.
+2. **Football Data API Test**: Verify that the Football-data [website's REST API](https://api.football-data.org/v4) responds properly to requests made up to receive different response statuses.
 
 ## Python Implementation
 ![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)
@@ -51,7 +53,7 @@ pytest -n 2
 ```
 will run the tests allocating two CPU cores.
 
-If you want to dinamically allocate the available CPU cores for parallel execution, pass ``auto`` instead of *number of cores*.
+If you want to dynamically allocate the available CPU cores for parallel execution, pass ``auto`` instead of *number of cores*.
 ```
 pytest -n auto
 ```
@@ -111,7 +113,7 @@ To generate a test report run
 npm run test:report
 ```
 
-Or alternativelly run 
+Or alternatively run 
 ```
 npm run test:sequence:report
 ```
@@ -176,7 +178,7 @@ The ecosystem is relatively newer compared to Pytest + Selenium
 
 ## Conclusion
 
-The choice between these two test automation setups largely depends on the specific requirements, existing skillsets, and priorities of the development team. Pytest + Selenium might be better suited for teams with Python expertise and a need for extensive customization, while Jest + Playwright could be a better choice for teams focused on fast test execution times and a more modern, user-friendly API.
+The choice between these two test automation setups largely depends on the specific requirements, existing skills, and priorities of the development team. Pytest + Selenium might be better suited for teams with Python expertise and a need for extensive customization, while Jest + Playwright could be a better choice for teams focused on fast test execution times and a more modern, user-friendly API.
 
 ## License
 
