@@ -19,7 +19,7 @@ Automation is an essential aspect of software development, especially regarding 
 ## Test Scenarios
 
 1. **Test scenario 1**: Verify that the search engine [DuckDuckGo](duckduckgo.com) finds and displays the [expected website](https://www.football-data.org/) in the first place when searching for `The dev-friendly football API`.
-2. **Test scenario 2**: Verify that the Football-data [website's REST API](https://api.football-data.org/v2) responds properly to requests made up to receive different response statusses.
+2. **Test scenario 2**: Verify that the Football-data [website's REST API](https://api.football-data.org/v4) responds properly to requests made up to receive different response statusses.
 
 ## Python Implementation
 ![img](https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png?f=webp&w=40)
