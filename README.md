@@ -80,7 +80,8 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 #### [Jest Stare](https://github.com/dkelosky/jest-stare/blob/master/README.md) plugin
 ![npm](https://img.shields.io/npm/v/jest-stare.svg) ![npm](https://img.shields.io/npm/dm/jest-stare.svg)
 #### [Typescript](https://www.typescriptlang.org/)
-#### [ts-jest](https://kulshekhar.github.io/ts-jest/) ![npm](https://img.shields.io/npm/v/ts-jest.svg) ![npm](https://img.shields.io/npm/dm/ts-jest.svg) 
+#### [ts-jest](https://kulshekhar.github.io/ts-jest/)
+![npm](https://img.shields.io/npm/v/ts-jest.svg) ![npm](https://img.shields.io/npm/dm/ts-jest.svg) 
 
 
 ### Usage
