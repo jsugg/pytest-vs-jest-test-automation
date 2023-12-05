@@ -30,7 +30,7 @@ jobs:
         npm install
         npm install -g typescript
         npx playwright install
-
+        npm audit fix
 
   jest-tests:
     needs: setup-node-dependencies
