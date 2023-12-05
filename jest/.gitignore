@@ -125,7 +125,7 @@ dist
 
 # Node
 node_modules
-package-lock.json
+# package-lock.json
 
 # MacOS
 .DS_Store
