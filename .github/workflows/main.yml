@@ -77,13 +77,13 @@ jobs:
         path: |
           ~/.cache/pip
           !~/.cache/pip/log
-          ~/venv
-        key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
+          ~/pytest/.venv
+        key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('pytest/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-python-${{ matrix.python-version }}-
     - name: Install dependencies
       run: |
-        python -m venv ~/venv
+        python -m venv ~/pytest/.venv
         source ~/venv/bin/activate
         pip install --no-cache-dir -r requirements.txt
       working-directory: pytest
