@@ -90,5 +90,5 @@ jobs:
 
     - name: Run Pytest tests
       run: |
+        cd pytest
         pytest -n 4
-      working-directory: pytest
