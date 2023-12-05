@@ -74,4 +74,4 @@ jobs:
     - name: Run Pytest tests
       run: |
         cd pytest
-        pytest -n 8
+        pytest -n 4
