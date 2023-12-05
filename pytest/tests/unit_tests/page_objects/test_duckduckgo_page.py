@@ -13,11 +13,10 @@ import pytest
 @pytest.fixture
 def driver_mock() -> mock.Mock:
     """Fixture to provide a mocked WebDriver."""
-    driver = mock.Mock(spec=WebDriver)
-    # Mock for a web element
-    element_mock = mock.Mock()
-    # Configure the driver mock to return the element mock
+    driver: WebDriver = mock.Mock(spec=WebDriver)
+    element_mock: mock.Mock = mock.Mock()
     driver.find_element.return_value = element_mock
+
     return driver
 
 
@@ -29,7 +28,8 @@ class TestDuckDuckGoPage:
         """
         Test the loading of the DuckDuckGo search page.
         """
-        page = DuckDuckGoPage(driver_mock)
+        page: DuckDuckGoPage = DuckDuckGoPage(driver_mock)
+
         page.open()
         driver_mock.get.assert_called_once_with("https://duckduckgo.com/")
 
@@ -38,8 +38,9 @@ class TestDuckDuckGoPage:
         """
         Test performing a search on the DuckDuckGo search page.
         """
-        page = DuckDuckGoPage(driver_mock)
-        query = "test query"
+        page: DuckDuckGoPage = DuckDuckGoPage(driver_mock)
+        query: str  = "test query"
+
         page.search(query)
         driver_mock.find_element.assert_called_once_with(By.NAME, "q")
         driver_mock.find_element.return_value.send_keys.assert_has_calls(
@@ -51,8 +52,11 @@ class TestDuckDuckGoPage:
         Test retrieving the first search result from the DuckDuckGo search page.
         """
         expected_selector: str = "#r1-0 > div > div > a"
-        page = DuckDuckGoPage(driver_mock)
+        query: str = "The dev-friendly football API"
+        page: DuckDuckGoPage  = DuckDuckGoPage(driver_mock)
+
+        page.search(query)
         page.get_first_result()
-        expected_calls = [mock.call(By.CSS_SELECTOR, expected_selector)]
+        expected_calls: list[mock._Call]  = [mock.call(By.CSS_SELECTOR, expected_selector)]
         driver_mock.find_element.assert_has_calls(
             expected_calls, any_order=True)
