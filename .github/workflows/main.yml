@@ -18,6 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: jest/package-lock.json
     - name: Install dependencies and Run JavaScript Jest tests
       run: |
         cd jest
@@ -37,6 +38,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: jest/package-lock.json
     - name: Install dependencies and Run TypeScript Jest tests
       run: |
         cd jest
@@ -61,7 +63,7 @@ jobs:
         path: |
           ~/.cache/pip
           !~/.cache/pip/log
-          ~/venv  # Caching virtual environment
+          ~/venv
         key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-python-${{ matrix.python-version }}-
