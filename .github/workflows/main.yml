@@ -26,9 +26,10 @@ jobs:
     - name: Install dependencies and run Jest tests
       run: |
         cd jest
-        npx playwright install
-        npm install @playwright/test 
         npm install
+        npm install @playwright/test
+        npx playwright install
+        npm install ts-jest
         npm run test
         npm run test:ts
 
