@@ -1,5 +1,5 @@
 // DuckDuckGoSearchPage POM unit tests
-const DuckDuckGoSearchPage = require('../../../page_objects/search/duckduckgo.js');
+const DuckDuckGoSearchPage = require('../../../../page_objects/search/duckduckgo.js');
 
 describe('DuckDuckGoSearchPage', () => {
   let page;
