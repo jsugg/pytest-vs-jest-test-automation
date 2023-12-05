@@ -94,8 +94,9 @@ In the `jest/` folder, you'll find the JavaScript implementation for the test sc
 2. Clone this repository.
 3. Navigate to the `jest/` folder.
 4. Install the project dependencies by running `npm install`.
-5. Execute the test scripts by running `npm run test`.
-6. For TypeScript tests, run `npm run test:ts`.
+5. Install Playwright by running `npx playwright install`.
+6. Execute the test scripts by running `npm run test`.
+7. For TypeScript tests, run `npm run test:ts`.
 
 #### :fast_forward: Parallel execution
 :point_right: **_By default_**, Jest runs tests **_in parallel_**, allocating the available CPU cores for parallel execution based on heuristics to optimize performance.
