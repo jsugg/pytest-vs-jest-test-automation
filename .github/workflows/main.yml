@@ -90,5 +90,5 @@ jobs:
 
     - name: Run Pytest tests
       run: |
-        pytest -n 4
+        ~/work/pytest-vs-jest-test-automation/pytest-vs-jest-test-automation/pytest/.venv/bin/pytest -n 4
       working-directory: pytest
