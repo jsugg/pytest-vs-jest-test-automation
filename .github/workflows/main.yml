@@ -69,8 +69,8 @@ jobs:
           ${{ runner.os }}-python-${{ matrix.python-version }}-
     - name: Install dependencies and Run Pytest tests
       run: |
-        cd pytest
         python -m venv ~/venv
         source ~/venv/bin/activate
         pip install --no-cache-dir -r requirements.txt
         pytest -n 4
+      working-directory: pytest
