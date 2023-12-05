@@ -1,6 +1,6 @@
 // TestFootballAPI POM unit tests
 import * as https from "https";
-import TestFootballAPI from "../../../page_objects/api/football-api.ts";
+import TestFootballAPI from "../../../../page_objects/api/football-api.ts";
 
 jest.mock("https");
 

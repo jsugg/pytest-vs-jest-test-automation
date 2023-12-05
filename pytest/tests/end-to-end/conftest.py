@@ -19,7 +19,8 @@ def driver() -> WebDriver:
     """
     Pytest fixture that provides a Selenium WebDriver for Chrome.
 
-    This fixture sets up a headless Chrome WebDriver before each test function and tears it down after. 
+    This fixture sets up a headless Chrome WebDriver before each test function
+    and tears it down after. 
     The WebDriver runs in headless mode with a window size of 1920x1080.
 
     Yields:

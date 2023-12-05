@@ -1,5 +1,5 @@
 // DuckDuckGoSearchPage POM unit tests
-import DuckDuckGoSearchPage from "../../../page_objects/search/duckduckgo.ts";
+import DuckDuckGoSearchPage from "../../../../page_objects/search/duckduckgo.ts";
 import { Browser, Page, BrowserContext } from "playwright";
 import * as playwright from "playwright";
 
