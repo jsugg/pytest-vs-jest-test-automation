@@ -18,10 +18,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: jest/package-lock.json
+
     - name: Install dependencies and Run JavaScript Jest tests
       run: |
-        npm install
+        npm ci
         npx playwright install
         npm run test
       working-directory: jest
@@ -41,7 +41,7 @@ jobs:
         cache-dependency-path: jest/package-lock.json
     - name: Install dependencies and Run TypeScript Jest tests
       run: |
-        npm install
+        npm ci
         npx playwright install
         npm run test:ts
       working-directory: jest
