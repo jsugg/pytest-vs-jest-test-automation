@@ -29,7 +29,7 @@ jobs:
         npm install
         npm install @playwright/test
         npx playwright install
-        npm install ts-jest
+        npm install ts-jest @types/jest
         npm run test
         npm run test:ts
 
