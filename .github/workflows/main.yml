@@ -18,7 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: jest/package-lock.json
     - name: Install dependencies and Run JavaScript Jest tests
       run: |
         cd jest
