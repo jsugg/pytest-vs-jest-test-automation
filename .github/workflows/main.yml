@@ -74,4 +74,5 @@ jobs:
     - name: Run Pytest tests
       run: |
         cd pytest
+        pip install --no-cache-dir -r requirements.txt
         pytest -n 4
