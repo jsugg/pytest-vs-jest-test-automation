@@ -10,15 +10,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.9.0]
-        python-version: [3.10.12]
+        node-version: [20.9]
+        python-version: [3.10]
 
     steps:
     - uses: actions/checkout@v2
 
     # Setup Node.js environment
     - name: Set up Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -35,7 +35,7 @@ jobs:
 
     # Setup Python environment
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
