@@ -26,10 +26,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies and Run JavaScript Jest tests
+    - name: Install dependencies
       run: |
         npm ci
         npx playwright install
+      working-directory: jest
+
+    - name: Run JavaScript Jest tests
+      run: |
         npm run test
       working-directory: jest
 
@@ -50,6 +54,9 @@ jobs:
       run: |
         npm ci
         npx playwright install
+      working-directory: jest
+    - name: Install dependencies and Run TypeScript Jest tests
+      run: |
         npm run test:ts
       working-directory: jest
       
@@ -74,10 +81,14 @@ jobs:
         key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-python-${{ matrix.python-version }}-
-    - name: Install dependencies and Run Pytest tests
+    - name: Install dependencies
       run: |
         python -m venv ~/venv
         source ~/venv/bin/activate
         pip install --no-cache-dir -r requirements.txt
+      working-directory: pytest
+
+    - name: Run Pytest tests
+      run: |
         pytest -n 4
       working-directory: pytest
