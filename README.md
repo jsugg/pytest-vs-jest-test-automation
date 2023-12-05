@@ -1,3 +1,4 @@
+![img](https://raw.githubusercontent.com/jsugg/pytest-vs-jest-test-automation/main/.github/assets/pytest_vs_jest.png)
 [![Run Tests on Pull Requests](https://github.com/jsugg/pytest-vs-jest-test-automation/actions/workflows/main.yml/badge.svg)](https://github.com/jsugg/pytest-vs-jest-test-automation/actions/workflows/main.yml)
 
 # Pytest-Selenium :vs: Jest-Playwright
