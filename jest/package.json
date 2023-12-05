@@ -17,6 +17,7 @@
   "author": "Juan Sugg",
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.40.1",
     "@popperjs/core": "^2.11.8",
     "@types/jest": "^29.5.10",
     "app-root-path": "^3.1.0",

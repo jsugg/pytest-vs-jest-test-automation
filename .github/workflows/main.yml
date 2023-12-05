@@ -3,44 +3,75 @@ name: Run Tests on Pull Requests
 on:
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  run-tests:
+  setup-node-dependencies:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [20.9]
-        python-version: [3.11]
-
+        node-version: [20.x]
     steps:
     - uses: actions/checkout@v4
-
-    # Setup Node.js environment
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-
-    # Install Jest dependencies and run tests
-    - name: Install dependencies and run Jest tests
+    - name: Cache Node.js modules
+      uses: actions/cache@v3
+      with:
+        path: jest/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install dependencies
       run: |
         cd jest
         npm install
+        npm install -g typescript
         npx playwright install
         npm audit fix
+
+  jest-tests:
+    needs: setup-node-dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run Jest tests
+      run: |
+        cd jest
         npm run test
         npm run test:ts
 
-    # Setup Python environment
+  setup-python-dependencies:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.10]
+    steps:
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-
-    # Install Pytest dependencies and run tests
-    - name: Install dependencies and run Pytest tests
+    - name: Cache Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install dependencies
       run: |
         cd pytest
-        pip install -r requirements.txt
-        pytest -n 4
+        pip install --no-cache-dir -r requirements.txt
+
+  pytest-tests:
+    needs: setup-python-dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run Pytest tests
+      run: |
+        cd pytest
+        pytest -n 8

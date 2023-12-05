@@ -23,7 +23,7 @@ class DuckDuckGoPage:
     URL: str = "https://duckduckgo.com/"
     SEARCH_BOX: tuple = (By.NAME, "q")
     FIRST_RESULT: tuple = (
-        By.CSS_SELECTOR, "#r1-0 > div.ikg2IXiCD14iVX7AdZo1 > h2 > a")
+        By.CSS_SELECTOR, "#r1-0 > div > div > a")
 
     def __init__(self, driver: WebDriver) -> None:
         """

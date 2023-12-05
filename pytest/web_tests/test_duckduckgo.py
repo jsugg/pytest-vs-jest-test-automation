@@ -10,6 +10,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
 
 from web_tests.pages.duckduckgo_page import DuckDuckGoPage
 
@@ -33,7 +34,7 @@ def test_duckduckgo_search(driver: WebDriver) -> None:
     duckduckgo_page.load()
     duckduckgo_page.search("The dev-friendly football API")
 
-    wait: WebDriverWait = WebDriverWait(driver, 20)
+    wait: WebDriverWait = WebDriverWait(driver, 30)
     expected_url = "https://www.football-data.org/"
 
     try:
@@ -41,6 +42,9 @@ def test_duckduckgo_search(driver: WebDriver) -> None:
             EC.presence_of_element_located(DuckDuckGoPage.FIRST_RESULT))
         assert first_result.get_attribute(
             'href') == expected_url, "The expected website was not the first search result."
+    except NoSuchElementException as e:
+        pytest.fail(
+            f"Search result was not found. Error: {e}")
     except TimeoutException as e:
         pytest.fail(
             f"Search result was not found within the specified time. Error: {e}")

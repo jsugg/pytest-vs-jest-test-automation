@@ -39,7 +39,7 @@ class DuckDuckGoSearchPage {
    * @return {Promise<ElementHandle>} The first search result element.
    */
   async getFirstResult() {
-    const firstResultSelector = '#r1-0 > div > h2 > a';
+    const firstResultSelector = '#r1-0 > div > div > a';
     try {
       await this.page.waitForSelector(firstResultSelector, { timeout: 10000 });
     } catch (error) {
