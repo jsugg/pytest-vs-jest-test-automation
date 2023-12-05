@@ -33,7 +33,7 @@ def test_duckduckgo_search(driver: WebDriver) -> None:
     duckduckgo_page.load()
     duckduckgo_page.search("The dev-friendly football API")
 
-    wait: WebDriverWait = WebDriverWait(driver, 20)
+    wait: WebDriverWait = WebDriverWait(driver, 30)
     expected_url = "https://www.football-data.org/"
 
     try:
