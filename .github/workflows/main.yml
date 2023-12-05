@@ -83,8 +83,7 @@ jobs:
           ${{ runner.os }}-python-${{ matrix.python-version }}-
     - name: Install dependencies
       run: |
-        pwd
-        python -m venv ~/pytest/.venv
+        python -m venv ~/work/pytest-vs-jest-test-automation/pytest-vs-jest-test-automation/pytest/.venv
         source ~/work/pytest-vs-jest-test-automation/pytest-vs-jest-test-automation/pytest/.venv/bin/activate
         pip install --no-cache-dir -r ~/work/pytest-vs-jest-test-automation/pytest-vs-jest-test-automation/pytest/requirements.txt
       working-directory: pytest
