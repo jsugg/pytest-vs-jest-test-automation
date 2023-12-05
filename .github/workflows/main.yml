@@ -27,9 +27,7 @@ jobs:
       run: |
         cd jest
         npm install
-        npm install @playwright/test
-        npx playwright install
-        npm install ts-jest @types/jest
+        npm audit fix
         npm run test
         npm run test:ts
 
